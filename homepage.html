@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application - Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('bggg.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            background-color: rgba(0, 123, 255, 0.8);
+            padding: 15px 0;
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header a:hover {
+            background-color: rgba(0, 86, 179, 0.8);
+        }
+
+        .container {
+            background: url('bg2.jpg') no-repeat center center;
+            background-size: cover;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .welcome {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #212529;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .content {
+            background: url('bg3.jpg') no-repeat center center;
+            background-size: cover;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 1);
+            color: #212529;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            height: 300px;
+            overflow: auto;
+        }
+
+        .content h2 {
+            color: #212529;
+        }
+
+        .content p {
+            color: #212529;
+        }
+
+        .start-button, .logout-button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .start-button {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .start-button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgb(255, 255, 255);
+        }
+        
+        .contact-info li:hover {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" aria-label="Go to Home" onclick="showSection('home')">Home</a>
+            <a href="#" aria-label="Go to About" onclick="showSection('about')">About</a>
+            <a href="#" aria-label="Go to Contact" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Quiz Application</h1>
+        <div class="welcome" id="welcomeMessage">Welcome, Guest!</div>
+        
+        <div id="home" class="content">
+            <h2>Welcome to the Quiz Application!</h2>
+            <p>Test your knowledge and have fun!</p>
+            <button class="start-button" onclick="start()">Start Quiz</button>
+            <button class="logout-button" onclick="confirmLogout()">Logout</button>
+        </div>
+
+        <div id="about" class="content" style="display: none;">
+            <h2>About Us</h2>
+            <p>This website is a front-end project created by Riya, Chashita, and Sanraj Singh. Our goal is to provide an engaging quiz experience for users to test their knowledge.</p>
+        </div>
+
+        <div id="contact" class="content" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <div class="contact-info">
+                <ul>
+                    <li><strong>Riya</strong><br>Roll No: 2410991499<br>Email: <a href="mailto:riya1499.becse24@chitkara.edu.in">riya1499.becse24@chitkara.edu.in</a></li>
+                    <li><strong>Chashita</strong><br>Roll No: 2410991019<br>Email: <a href="mailto:chashita1019.becse24@chitkara.edu.in">chashita1019.becse24@chitkara.edu.in</a></li>
+                    <li><strong>Sanraj Singh</strong><br>Roll No: 2410991513<br>Email: <a href="mailto:sanraj1513@edu.in">sanraj1513.becse24@chitkara.edu.in</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(section) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+
+        function confirmLogout() {
+            if (confirm('Are you sure you want to logout?')) {
+                logout();
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser ');
+            window.location.href = 'index.html';
+        }
+
+        function start() {
+            window.location.href = 'quiz.html';
+        }
+
+        const currentUser  = localStorage.getItem('currentUser ');
+        if (currentUser ) {
+            document.getElementById('welcomeMessage').innerText = `Welcome, ${currentUser }!`;
+        } else {
+            document.getElementById('welcomeMessage').innerText = 'Welcome, Guest!';
+        }
+        
+        showSection('home');
+    </script>
+</body>
+</html>
