@@ -24,7 +24,7 @@ function signup() {
 
     // Validate input
     if (!username || !password) {
-        alert('Please enter both username and password.');
+        alert('Please Enter Both Username and Password.');
         return;
     }
 
@@ -57,7 +57,7 @@ function login() {
 
     // Validate input
     if (!username || !password) {
-        errorMessage.innerText = 'Please enter both username and password.';
+        errorMessage.innerText = 'Please Enter Both Username and Password.';
         errorMessage.style.display = 'block';
         return;
     }
@@ -69,12 +69,12 @@ function login() {
     
     if (user) {
         // Successful login
-        alert('Login successful! Redirecting to the homepage...');
+        alert('Login Successful! Redirecting to the Homepage...');
         // Redirect to a new page (you can change 'homepage.html' to your desired page)
         window.location.href = 'homepage.html';
     } else {
         // Invalid credentials
-        errorMessage.innerText = 'Invalid username or password. Please try again.';
+        errorMessage.innerText = 'Invalid Username or Password. Please try again.';
         errorMessage.style.display = 'block';
     }
 }
