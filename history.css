@@ -10,13 +10,13 @@ body {
 }
 
 .container {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: blue;
+    border-radius: 75px;
+    box-shadow: 0 5px 21px rgba(0.2, 0.7, 0.4, 0.12);
     padding: 20px;
-    width: 350px;
+    width: 450px;
     text-align: center;
-    animation: fadeIn 1s;
+    animation: fadeIn 1.4s;
 }
 
 h1 {
@@ -30,33 +30,33 @@ h1 {
 
 .slide {
     display: none;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease;
 }
 
 .slide.active {
     display: block;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 10px;
+    padding: 15px 25px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 label {
     display: block;
     background-color: #e0e0e0;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 10px;
     margin: 5px 0;
     transition: background-color 0.3s, color 0.3s;
