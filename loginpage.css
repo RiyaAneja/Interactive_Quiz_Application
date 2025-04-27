@@ -6,16 +6,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set to full viewport height */
+    height: 100vh;
     margin: 0; /* Remove default margin */
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 15px;
+    background: rgba(245, 245, 245, 0.9);
+    padding: 50px;
+    border-radius: 25px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 350px;
     text-align: center;
     transition: transform 0.3s;
 }
