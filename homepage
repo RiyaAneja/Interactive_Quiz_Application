@@ -23,12 +23,12 @@
             width: 100%;
             background-color: rgba(0, 123, 255, 0.8);
             padding: 15px 0;
-            color: white;
+            color: blue;
             box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
         }
 
         header a {
-            color: white;
+            color: green;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -43,7 +43,7 @@
             background: url('bg2.jpg') no-repeat center center;
             background-size: cover;
             width: 80%;
-            max-width: 600px;
+            max-width: 650px;
             margin-top: 20px;
             text-align: center;
             border-radius: 10px;
