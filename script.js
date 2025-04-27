@@ -24,7 +24,7 @@ function signup() {
 
     // Validate input
     if (!username || !password) {
-        alert('Please enter both username and password.');
+        alert('Please enter both Username and Password.');
         return;
     }
 
