@@ -15,8 +15,7 @@ in a highly interactive environment.
 Features of Interactive Learning Through Quiz Apps:
 
 1.Multiple Choice Questions: The foundation of quiz apps lies in their diverse question formats, with multiple-choice questions being 
-the most common. These questions can cover a wide array of topics, from academic subjects like math and science to fun trivia and general 
-knowledge, ensuring relevance for various user demographics. These structured options make the experience simple yet impactful.
+the most common. These questions can cover a wide array of topics. These structured options make the experience simple yet impactful.
 
 2.Instant Feedback: Providing immediate feedback on answers is one of the app’s strongest educational tools. Users are not only informed 
 whether their answer is correct or incorrect but are also given explanations, reinforcing learning by offering context or additional
