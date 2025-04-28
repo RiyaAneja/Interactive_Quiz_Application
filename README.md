@@ -39,7 +39,6 @@ includinglayout, colors,
 and fonts.
 
 JS
-
 Java Script used to make web page more dynamic and interactive.
 
 
