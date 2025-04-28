@@ -21,7 +21,7 @@
             display: flex;
             justify-content: space-around;
             width: 100%;
-            background-color: rgba(0, 123, 255, 0.8);
+            background-color: rgba(0, 123, 255, 0.4);
             padding: 15px 0;
             color: blue;
             box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
