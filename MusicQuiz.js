@@ -1,6 +1,6 @@
 var currentSlide = 0;
 var slides = document.querySelectorAll('.slide');
-var totalSlides = slides.length;
+var totalSlides = slides.lengt;
 var nextButton = document.getElementById('next');
 nextButton.onclick = function() {
     if (currentSlide < totalSlides - 1) {
