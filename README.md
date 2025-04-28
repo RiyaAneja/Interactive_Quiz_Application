@@ -1,7 +1,6 @@
 Welcome to the development of an interactive quiz 
 application  using HTML.
-This presentation will guide you through the project's
- goals, design, and implementation.
+
 You will learn how to leverage HTML, CSS, and
    JavaScript to create a functional and engaging quiz
    experience.
