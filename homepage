@@ -20,7 +20,7 @@
         header {
             display: flex;
             justify-content: space-around;
-            width: 100%;
+            width: 80%;
             background-color: rgba(0, 123, 255, 0.8);
             padding: 15px 0;
             color: blue;
