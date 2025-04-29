@@ -31,7 +31,7 @@ HTML
 The foundation of the
 application,defining the 
 structureand content of 
-the quiz.
+the quiz
 
 CSS
 Styles the visual
