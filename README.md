@@ -3,7 +3,7 @@ application  using HTML.
 
 You will learn how to leverage HTML, CSS, and
    JavaScript to create a functional and engaging quiz
-   experience
+   experience.
 
 An interactive quiz app is a dynamic platform designed to engage users with fun and challenging quizzes on various topics. 
 It offers features like timed challenges, leaderboards, and personalized results, making learning both entertaining and competitive. 
