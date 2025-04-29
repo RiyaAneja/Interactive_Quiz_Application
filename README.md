@@ -1,5 +1,5 @@
 Welcome to the development of an interactive quiz
-application  using HTML.
+application  using HTML
 
 You will learn how to leverage HTML, CSS, and
    JavaScript to create a functional and engaging quiz
