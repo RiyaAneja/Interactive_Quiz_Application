@@ -11,11 +11,12 @@ function saveUsers(users) {
 
 // Function to toggle between signup and login forms
 function toggleForms() {
-    const signupForm = document.getElementById('signup-form');
-    const loginForm = document.getElementById('login-form');
-    signupForm.style.display = signupForm.style.display === 'none' ? 'block' : 'none';
-    loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+    const signupForm = document.getElementById("signup-form");
+    const loginForm = document.getElementById("login-form");
+    signupForm.style.display = (signupForm.style.display === "none") ? "block" : "none";
+    loginForm.style.display = (loginForm.style.display === "none") ? "block" : "none";
 }
+
 
 // Function to handle signup
 function signup() {
@@ -32,7 +33,7 @@ function signup() {
 
     // Check if the username already exists
     if (users.find(user => user.username === username)) {
-        alert('Username already exists. Please choose another one.');
+        alert('Username already exists. Please choose a different one.');
         return;
     }
 
@@ -41,7 +42,7 @@ function signup() {
     saveUsers(users);
 
     // Show confirmation popup
-    alert('Signup successful! Redirecting to login...');
+    alert('Signup successful! Redirecting to the login...');
     toggleForms(); // Switch to login form
 }
 
