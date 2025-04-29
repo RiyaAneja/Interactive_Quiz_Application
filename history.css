@@ -10,14 +10,15 @@ body {
 }
 
 .container {
-    background: white;
-    border-radius: 55px;
-    box-shadow: 0.4 5.4px 21.4px rgba(0.9, 1, 0.4, 0.12);
-    padding: 10px;
-    width: 550px;
+    background-color: white; 
+    border-radius: 50px;
+    box-shadow: 0 5px 22px rgba(0.9, 1, 0.4, 0.12); 
+    padding: 15px; 
+    width: 540px; 
     text-align: center;
-    animation: fadeIn 1.114s;
+    animation: fadeIn 1.1s ease-in; 
 }
+
 
 h1 {
     color: #57896;
