@@ -1,6 +1,6 @@
 body {
     
-    background: linear-gradient(to top, #8ea48e, #28722c); 
+    background-color: linear-gradient(to top, #8ea48e, #28722c); 
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -10,13 +10,13 @@ body {
 }
 
 .container {
-    background: white;
+    background-color: white; 
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 350px;
     text-align: center;
-    animation: fadeIn 1s;
+    animation: fadeIn 1s ease-in; 
 }
 
 h1 {
