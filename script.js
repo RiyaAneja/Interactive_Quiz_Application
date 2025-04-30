@@ -5,12 +5,6 @@ function getUsers() {
 function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users)); 
 }
-function toggleForms() {
-    const signupForm = document.getElementById("signup-form");
-    const loginForm = document.getElementById("login-form");
-    signupForm.style.display = (signupForm.style.display === "none") ? "block" : "none";
-    loginForm.style.display = (loginForm.style.display === "none") ? "block" : "none";
-}
 function signup() {
     const username = document.getElementById('signup-username').value.trim();
     const password = document.getElementById('signup-password').value()
@@ -51,4 +45,11 @@ function login() {
         errorMessage.innerText = 'Invalid username or password. Please try again.';
         errorMessage.style.display = 'block';
     }
+function toggleForms() {
+    const signupForm = document.getElementById("signup-form");
+    const loginForm = document.getElementById("login-form");
+    signupForm.style.display = (signupForm.style.display === "none") ? "block" : "none";
+    loginForm.style.display = (loginForm.style.display === "none") ? "block" : "none";
 }
+
+
