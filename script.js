@@ -28,29 +28,19 @@ function signup() {
     alert('Signup successful! Redirecting to the login...');
     toggleForms(); 
 }
-
-// Function to handle login
 function login() {
     const username = document.getElementById('login-username').value.trim();
     const password = document.getElementById('login-password').value;
     const errorMessage = document.getElementById('error-message');
-
-    // Clear previous error message
     errorMessage.style.display = 'none';
     errorMessage.innerText = '';
-
-    // Validate input
     if (!username || !password) {
         errorMessage.innerText = 'Please enter both username and password.';
         errorMessage.style.display = 'block';
         return;
     }
-
     const users = getUsers();
-
-    // Check if the user exists and the password is correct
     const user = users.find(user => user.username === username && user.password === password);
-    
     if (user) {
         // Successful login
         alert('Login successful! Redirecting to the homepage...');
