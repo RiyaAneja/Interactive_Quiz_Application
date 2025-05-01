@@ -1,48 +1,32 @@
-/ Function to get users from local storage or initialize an empty array
 function getUsers() {
     const users = localStorage.getItem('users');
     return users ? JSON.parse(users) : [];
 }
-
-// Function to save users to local storage
 function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users)); // Corrected variable name from 'user' to 'users'
 }
-
-// Function to toggle between signup and login forms
 function toggleForms() {
     const signupForm = document.getElementById('signup-form');
     const loginForm = document.getElementById('login-form');
     signupForm.style.display = (signupForm.style.display === 'none' || signupForm.style.display === '') ? 'block' : 'none';
     loginForm.style.display = (loginForm.style.display === 'none' || loginForm.style.display === '') ? 'block' : 'none';
 }
-
-// Function to handle signup
 function signup() {
     const username = document.getElementById('signup-username').value.trim();
     const password = document.getElementById('signup-password').value;
-
-    // Validate input
-    if (!username || !password) {
+if (!username || !password) {
         alert('Please Enter Both Username and Password.');
         return;
     }
-
     const users = getUsers();
-
-    // Check if the username already exists
-    if (users.find(user => user.username === username)) {
+if (users.find(user => user.username === username)) {
         alert('Username already exists. Please choose another one.');
         return;
     }
-
-    // Store user data
-    users.push({ username, password });
+users.push({ username, password });
     saveUsers(users);
-
-    // Show confirmation popup
-    alert('Signup successful! Redirecting to login...');
-    toggleForms(); // Switch to login form
+alert('Signup successful! Redirecting to login...');
+    toggleForms();
 }
 
 // Function to handle login
