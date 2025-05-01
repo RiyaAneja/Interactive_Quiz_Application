@@ -1,33 +1,32 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     background-image: url("3409297.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250vh;
-    margin: 0; 
+    height: 150vh;
+    margin: 0.5; 
 }
 .container {
-    background: rgba(140, 140, 140, 1);
-    padding: 43px;
-    border-radius: 30px;
-    box-shadow: 1 9px 31px rgba(0.2, 0.2, 0.2, 0.2);
-    width: 400px;
+    background: rgba(135, 135, 135, 1);
+    padding: 33px;
+    border-radius: 20px;
+    box-shadow: 2 7px 28px rgba(0.3, 0.3, 0.3, 0.3);
+    width: 300px;
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .container:hover {
-    transform: scale(0.2);
+    transform: scale(0.3);
 }
 
 h2 {
     color: #4879;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-
 input {
     width: 80%;
     padding: 55px;
