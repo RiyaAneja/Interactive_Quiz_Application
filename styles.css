@@ -2,30 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url("3409297.jpg"); /* Replace with your image URL */
+    background-image: url("3409297.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set to full viewport height */
-    margin: 0; /* Remove default margin */
+    height: 150vh; 
+    margin: 10;
 }
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    background: rgba(250, 245, 235, 0.9);
+    padding: 50px;
+    border-radius: 35px;
+    box-shadow: 2 10px 25px rgba(0.2, 0.2, 0.2, 0.4);
+    width: 200px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 .container:hover {
-    transform: scale(1.02);
+    transform: scale(1.2);
 }
 h2 {
     color: #3554;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 input {
     width: 100%;
