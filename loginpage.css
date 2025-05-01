@@ -1,39 +1,39 @@
 body {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-image: url("3409297.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
-    margin: 10; 
+    height: 250vh;
+    margin: 0; 
 }
 .container {
-    background: rgba(145, 145, 145, 0.9);
-    padding: 40px;
-    border-radius: 35px;
+    background: rgba(140, 140, 140, 1);
+    padding: 43px;
+    border-radius: 30px;
     box-shadow: 1 9px 31px rgba(0.2, 0.2, 0.2, 0.2);
-    width: 450px;
+    width: 400px;
     text-align: center;
-    transition: transform 0.4s;
+    transition: transform 0.2s;
 }
 
 .container:hover {
-    transform: scale(1.2);
+    transform: scale(0.2);
 }
 
 h2 {
     color: #4879;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 input {
-    width: 90%;
-    padding: 25px;
-    margin: 20px 0;
-    border: 5px solid #ccc;
-    border-radius: 10px;
+    width: 80%;
+    padding: 55px;
+    margin: 10px 0;
+    border: 7px solid #ccc;
+    border-radius: 12px;
     transition: border-color 0.5s;
 }
 
