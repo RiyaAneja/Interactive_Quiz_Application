@@ -9,6 +9,26 @@ body {
     height: 250vh;
     margin: 1; 
 }
+button {
+    width: 90%;
+    padding: 25px;
+    background-color: #007bff;
+    color: lightblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: 2px solid #0056b3; /* Added focus state for accessibility */
+}
 .container {
     background: rgba(130, 130, 130, 1);
     padding: 31px;
@@ -41,26 +61,7 @@ input:focus {
     outline: none;
 }
 
-button {
-    width: 90%;
-    padding: 25px;
-    background-color: #007bff;
-    color: lightblue;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 17px;
-    transition: background-color 0.3s, transform 0.3s;
-}
 
-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-button:focus {
-    outline: 2px solid #0056b3; /* Added focus state for accessibility */
-}
 
 p {
     margin-top: 15px;
