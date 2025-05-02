@@ -1,16 +1,16 @@
 body {
     background: linear-gradient(to top, #8ea48e, #28722c); 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
+    height: 300vh;
     margin: 2px;
 }
 
 .container {
     background-color: white; 
-    border-radius: 35px;
+    border-radius: 25px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     padding: 25px;
     width: 200px;
