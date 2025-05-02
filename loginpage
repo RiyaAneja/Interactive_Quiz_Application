@@ -8,7 +8,7 @@ function saveUsers(users) {
 function toggleForms() {
     const signupForm = document.getElementById('signup-form');
     const loginForm = document.getElementById('login-form');
-    signupForm.style.display = (signupForm.style.display === 'none' || signupForm.style.display === '') ? 'block' : 'none';
+    signupForm.style.display = (signupForm.style.display === 'none' || signupForm.style.display === '') ? 'block' : 'none' ;
     loginForm.style.display = (loginForm.style.display === 'none' || loginForm.style.display === '') ? 'block' : 'none';
 }
 function signup() {
