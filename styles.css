@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     background-image: url("3409297.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250vh; 
-    margin: 20px;
+    height: 300vh; 
+    margin: 30px;
 }
 .container {
     background: rgba(230, 227, 212, 0.5);
-    padding: 20px;
-    border-radius: 05px;
+    padding: 30px;
+    border-radius: 15px;
     box-shadow: 1 10px 30px rgba(0.2, 0.2, 0.2, 0.4);
     width: 150px;
     text-align: center;
