@@ -15,7 +15,7 @@ body {
     border-radius: 17px;
     box-shadow: 3 8px 25px rgba(0.2, 0.3, 0.3 0.3);
     width: 250px;
-    text-align: centers;
+    text-align: center;
     transition: transform 0.2s;
 }
 
