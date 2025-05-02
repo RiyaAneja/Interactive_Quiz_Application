@@ -4,25 +4,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
-    margin: 2px;
+    height: 300vh;
+    margin: 5px;
 }
 
 .container {
     background-color: white; 
-    border-radius: 25px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    width: 200px;
+    border-radius: 35px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 100px;
     text-align: center;
-    animation: fadeIn 1s ease-out; 
+    animation: fadeIn 1s ease-in; 
 }
 h1 {
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .slides {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .slide {
