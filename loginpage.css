@@ -1,26 +1,26 @@
 body {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-image: url("3409297.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
-    margin: 0.5; 
+    height: 250vh;
+    margin: 1; 
 }
 .container {
-    background: rgba(135, 135, 135, 1);
-    padding: 33px;
-    border-radius: 20px;
-    box-shadow: 2 7px 28px rgba(0.3, 0.3, 0.3, 0.3);
-    width: 300px;
+    background: rgba(130, 130, 130, 1);
+    padding: 31px;
+    border-radius: 18px;
+    box-shadow: 3 8px 25px rgba(0.2, 0.3, 0.3 0.3);
+    width: 250px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .container:hover {
-    transform: scale(0.3);
+    transform: scale(0.4);
 }
 
 h2 {
