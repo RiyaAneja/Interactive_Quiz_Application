@@ -6,7 +6,7 @@ function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users)); 
 }
 function signup() {
-    const username = document.getElementById('signup-username').value.trim();
+    const username = document.getElementById('signup-username') .value.trim();
     const password = document.getElementById('signup-password').value()
     if (!username || !password) {
         alert('Please enter both Username and Password.');
