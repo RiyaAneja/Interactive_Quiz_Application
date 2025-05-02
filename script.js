@@ -1,10 +1,11 @@
+function saveUsers(users) {
+    localStorage.setItem('users', JSON.stringify(users)); 
+}
 function getUsers() {
     const users = localStorage.getItem('users');
     return users ? JSON.parse(users) : [];
 }
-function saveUsers(users) {
-    localStorage.setItem('users', JSON.stringify(users)); 
-}
+
 function signup() {
     const username = document.getElementById('signup-username').value.trim();
     const password = document.getElementById('signup-password').value()
