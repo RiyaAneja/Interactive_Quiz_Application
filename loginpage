@@ -13,7 +13,7 @@ function toggleForms() {
 }
 function signup() {
     const username = document.getElementById('signup-username').value.trim();
-    const password = document.getElementById('signup-password').value;
+    const password = document.getElementById('signup-password').value ;
 if (!username || !password) {
         alert('Please Enter Both Username and Password.');
         return;
