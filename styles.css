@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-body {
-    font-family: 'Times New Roman', sans-serif;
-    background-image: url("3409297.jpg"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300vh; 
-    margin: 30px;
-}
+
 .container {
     background: rgba(230, 227, 212, 0.5);
     padding: 30px;
