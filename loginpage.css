@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-image: url("3409297.jpg"); 
     background-size: cover;
-    background-repeat: no -repeat;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
