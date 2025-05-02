@@ -7,13 +7,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300vh; 
-    margin: 15;
+    height: 250vh; 
+    margin: 20px;
 }
 .container {
     background: rgba(230, 227, 212, 0.5);
-    padding: 25px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 05px;
     box-shadow: 1 10px 30px rgba(0.2, 0.2, 0.2, 0.4);
     width: 150px;
     text-align: center;
