@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-image: url("3409297.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250vh; 
-    margin: 20;
+    height: 300vh; 
+    margin: 15;
 }
 .container {
-    background: rgba(240, 237, 232, 0.7);
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 3 20px 35px rgba(0.2, 0.2, 0.2, 0.4);
-    width: 200px;
+    background: rgba(230, 227, 212, 0.5);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 1 10px 30px rgba(0.2, 0.2, 0.2, 0.4);
+    width: 150px;
     text-align: center;
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 }
 .container:hover {
-    transform: scale(1.2);
+    transform: scale(0.9);
 }
 h2 {
     color: #3554;
