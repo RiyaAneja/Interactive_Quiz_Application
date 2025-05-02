@@ -27,6 +27,9 @@ nextButton.onclick = function() {
         if (Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(el => el.value).includes('C')) {
             score++;
         }
+
+
+        
         document.getElementById('result').innerText = 'You scored ' + score + ' out of ' + totalSlides;
         nextButton.style.display = 'none';
     }
