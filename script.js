@@ -37,7 +37,7 @@ function login() {
     const user = users.find(user => user.username === username && user.password === password);
     if (user) {
         // Successful login
-        alert('Login successfuls! Redirecting to the homepage...');
+        alert('Login successful! Redirecting to the homepage...');
         // Redirect to a new page (you can change 'homepage.html' to your desired page)
         window.location.href = 'homepage.html';
     } else {
