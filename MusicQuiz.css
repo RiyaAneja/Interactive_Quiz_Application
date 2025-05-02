@@ -17,6 +17,10 @@ body {
     text-align: center;
     animation: fadeIn 1s ease-in; 
 }
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
 .slides {
     margin-bottom: 20px;
 }
@@ -31,10 +35,6 @@ body {
     opacity: 1;
 }
 
-h1 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
 
 button {
     background-color: #4CAF50;
