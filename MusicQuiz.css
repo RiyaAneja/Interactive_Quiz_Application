@@ -1,10 +1,10 @@
 body {
     background: linear-gradient(to top, #8ea48e, #28722c); 
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300vh;
+    height: 200vh;
     margin: 2px;
 }
 
