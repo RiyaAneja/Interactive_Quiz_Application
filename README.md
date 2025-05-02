@@ -5,12 +5,14 @@
 
 You will learn how to leverage HTML, CSS, and JavaScript to create a functional and engaging quiz experience.
 
-An interactive quiz app is a dynamic platform designed to engage users with fun and challenging quizzes on various topics. 
-It offers features like timed challenges, leaderboards, and personalized results, making learning both entertaining and competitive. 
-
 Interactive quiz applications are reshaping the way we approach learning, making it accessible, engaging, and effective for users  
 of all age groups. These platforms combine technology with educational methods to foster both enjoyment and knowledge acquisition 
 in a highly interactive environment.
+
+An interactive quiz app is a dynamic platform designed to engage users with fun and challenging quizzes on various topics. 
+It offers features like timed challenges, leaderboards, and personalized results, making learning both entertaining and competitive. 
+
+
 
 Features of Interactive Learning Through Quiz Apps:
 
