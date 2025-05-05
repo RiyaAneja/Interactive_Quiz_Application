@@ -1,65 +1,77 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Times New Roman', sans-serif;
-    background-image: url("3409297.jpg"); 
+    font-family: 'Roboto', sans-serif;
+    background-image: url("3409297.jpg"); /* Replace with your image URL */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300vh; 
-    margin: 30px;
+    height: 100vh; /* Set to full viewport height */
+    margin: 0; /* Remove default margin */
 }
+
 .container {
-    background: rgba(230, 227, 212, 0.5);
-    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 1 10px 30px rgba(0.2, 0.2, 0.2, 0.4);
-    width: 150px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
     text-align: center;
     transition: transform 0.3s;
 }
+
 .container:hover {
-    transform: scale(0.9);
+    transform: scale(1.02);
 }
+
 h2 {
-    color: #3554;
-    margin-bottom: 30px;
+    color: #333;
+    margin-bottom: 20px;
 }
+
 input {
     width: 100%;
-    padding: 25px;
-    margin: 20px 0;
+    padding: 15px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: border-color 0.3s;
 }
+
 input:focus {
     border-color: #007bff;
     outline: none;
 }
+
 button {
     width: 100%;
     padding: 15px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+
 button:focus {
     outline: 2px solid #0056b3; /* Added focus state for accessibility */
 }
+
 p {
-    margin-top: 20px;
+    margin-top: 15px;
     color: #666;
 }
+
 .error-message {
     color: red;
     margin-top: 10px;
@@ -68,6 +80,8 @@ p {
     padding: 5px;
     border-radius: 5px;
 }
+
+/* Additional styles for responsiveness */
 @media (max-width: 450px) {
     .container {
         width: 90%;
