@@ -1,57 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick quiz-play</title>
-    <link rel="stylesheet" href="musicquiz.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Quiz - Play</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #8ea48e, #28722c);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #d9534f;
+    }
+
+    .slides {
+      margin-bottom: 20px;
+    }
+
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    label,
+    input[type=radio] {
+      cursor: pointer;
+    }
+
+    input[type=radio] {
+      margin-right: 8px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Music Quiz...</h1>
-            <div class="slides">
-            <div class="slide active">
-                <p>1. Which musical instrument has black and white keys?</p>
-                <label><input type="radio" name="q1" value="A"> A) Violin</label><br>
-                <label><input type="radio" name="q1" value="B"> B) Drums</label><br>
-                <label><input type="radio" name="q1" value="C"> C) Piano</label><br>
-                <label><input type="radio" name="q1" value="D"> D) Flute</label>
-            </div>
-            <div class="slide">
-                <p>2. Which artist released the album "1989"?</p>
-                <label><input type="radio" name="q2" value="A"> A) Ariaan</label><br>
-                <label><input type="radio" name="q2" value="B"> B) Taylor</label><br>
-                <label><input type="radio" name="q2" value="C"> C) Miley</label><br>
-                <label><input type="radio" name="q2" value="D"> D) Demi</label>
-            </div>
-            <div class="slide">
-                <p>3. What instrument is often associated with classical music and orchestras?</p>
-                <label><input type="radio" name="q3" value="A"> A) Flute</label><br>
-                <label><input type="radio" name="q3" value="B"> B) Violin</label><br>
-                <label><input type="radio" name="q3" value="C"> 3) Trumpet</label><br>
-                <label><input type="radio" name="q3" value="D"> D) Cello</label>
-            </div>
-            <div class="slide">
-                <p>4.What is the standard number of beats in a measure of 4/4 time? </p>
-                <label><input type="radio" name="q3" value="A"> A) 2</label><br>
-                <label><input type="radio" name="q3" value="B"> B) 3</label><br>
-                <label><input type="radio" name="q3" value="C"> C) 4</label><br>
-                <label><input type="radio" name="q3" value="D"> D) 6</label>
-            </div>
-            <div class="slide">
-                <p>5. Which instrument is known as the "queen of instruments"?</p>
-                <label><input type="radio" name="q3" value="A"> A) Violin</label><br>
-                <label><input type="radio" name="q3" value="B"> B) Piano</label><br>
-                <label><input type="radio" name="q3" value="C"> C) Organ</label><br>
-                <label><input type="radio" name="q3" value="D"> D) Flute</label>
-            </div>
-                
-       </div>
+  <div class="container">
+    <h1>Music Quiz</h1>
+    <div id="timer">Time left: 10:00</div>
+    <div class="slides">
+      <div class="slide active">
+        <p>1. Who is known as the "King of Pop"?</p>
+        <input type="radio" name="q1" value="A" /> A) Michael Jackson<br />
+        <input type="radio" name="q1" value="B" /> B) Elvis Presley<br />
+        <input type="radio" name="q1" value="C" /> C) Prince<br />
+        <input type="radio" name="q1" value="D" /> D) Freddie Mercury
+      </div>
+
+      <div class="slide">
+        <p>2. Which band released the album "Abbey Road"?</p>
+        <input type="radio" name="q2" value="A" /> A) The Rolling Stones<br />
+        <input type="radio" name="q2" value="B" /> B) The Beatles<br />
+        <input type="radio" name="q2" value="C" /> C) Pink Floyd<br />
+        <input type="radio" name="q2" value="D" /> D) Led Zeppelin
+      </div>
+
+      <div class="slide">
+        <p>3. What genre is Taylor Swift primarily known for?</p>
+        <input type="radio" name="q3" value="A" /> A) Pop<br />
+        <input type="radio" name="q3" value="B" /> B) Country<br />
+        <input type="radio" name="q3" value="C" /> C) Rock<br />
+        <input type="radio" name="q3" value="D" /> D) Jazz
+      </div>
+
+      <div class="slide">
+        <p>4. The song "Bohemian Rhapsody" was performed by?</p>
+        <input type="radio" name="q4" value="A" /> A) Queen<br />
+        <input type="radio" name="q4" value="B" /> B) The Beatles<br />
+        <input type="radio" name="q4" value="C" /> C) The Who<br />
+        <input type="radio" name="q4" value="D" /> D) Nirvana
+      </div>
+
+      <div class="slide">
+        <p>5. What instrument does Yo-Yo Ma play?</p>
+        <input type="radio" name="q5" value="A" /> A) Violin<br />
+        <input type="radio" name="q5" value="B" /> B) Piano<br />
+        <input type="radio" name="q5" value="C" /> C) Cello<br />
+        <input type="radio" name="q5" value="D" /> D) Guitar
+      </div>
+
+      <div class="slide">
+        <p>6. Who is the lead singer of U2?</p>
+        <input type="radio" name="q6" value="A" /> A) Bono<br />
+        <input type="radio" name="q6" value="B" /> B) Sting<br />
+        <input type="radio" name="q6" value="C" /> C) Mick Jagger<br />
+        <input type="radio" name="q6" value="D" /> D) Axl Rose
+      </div>
+
+      <div class="slide">
+        <p>7. In which city was the genre Jazz born?</p>
+        <input type="radio" name="q7" value="A" /> A) Chicago<br />
+        <input type="radio" name="q7" value="B" /> B) New Orleans<br />
+        <input type="radio" name="q7" value="C" /> C) New York<br />
+        <input type="radio" name="q7" value="D" /> D) Los Angeles
+      </div>
+
+      <div class="slide">
+        <p>8. What is the term for a group of singers?</p>
+        <input type="radio" name="q8" value="A" /> A) Band<br />
+        <input type="radio" name="q8" value="B" /> B) Choir<br />
+        <input type="radio" name="q8" value="C" /> C) Orchestra<br />
+        <input type="radio" name="q8" value="D" /> D) Solo
+      </div>
+
+      <div class="slide">
+        <p>9. Who won the first season of American Idol?</p>
+        <input type="radio" name="q9" value="A" /> A) Kelly Clarkson<br />
+        <input type="radio" name="q9" value="B" /> B) Carrie Underwood<br />
+        <input type="radio" name="q9" value="C" /> C) Jennifer Hudson<br />
+        <input type="radio" name="q9" value="D" /> D) Fantasia Barrino
+      </div>
+
+      <div class="slide">
+        <p>10. What is Beethoven’s first name?</p>
+        <input type="radio" name="q10" value="A" /> A) Johann<br />
+        <input type="radio" name="q10" value="B" /> B) Wolfgang<br />
+        <input type="radio" name="q10" value="C" /> C) Ludwig van<br />
+        <input type="radio" name="q10" value="D" /> D) Franz
+      </div>
+
+      <div class="slide">
+        <p>11. Which band is known for "Hotel California"?</p>
+        <input type="radio" name="q11" value="A" /> A) The Eagles<br />
+        <input type="radio" name="q11" value="B" /> B) Fleetwood Mac<br />
+        <input type="radio" name="q11" value="C" /> C) The Doors<br />
+        <input type="radio" name="q11" value="D" /> D) Pink Floyd
+      </div>
+
+      <div class="slide">
+        <p>12. Who is called the "Queen of Soul"?</p>
+        <input type="radio" name="q12" value="A" /> A) Aretha Franklin<br />
+        <input type="radio" name="q12" value="B" /> B) Diana Ross<br />
+        <input type="radio" name="q12" value="C" /> C) Tina Turner<br />
+        <input type="radio" name="q12" value="D" /> D) Whitney Houston
+      </div>
+
+      <div class="slide">
+        <p>13. The song "Shape of You" was performed by?</p>
+        <input type="radio" name="q13" value="A" /> A) Ed Sheeran<br />
+        <input type="radio" name="q13" value="B" /> B) Justin Bieber<br />
+        <input type="radio" name="q13" value="C" /> C) Shawn Mendes<br />
+        <input type="radio" name="q13" value="D" /> D) Bruno Mars
+      </div>
+
+      <div class="slide">
+        <p>14. What genre combines elements of hip hop and rock?</p>
+        <input type="radio" name="q14" value="A" /> A) Country<br />
+        <input type="radio" name="q14" value="B" /> B) Nu Metal<br />
+        <input type="radio" name="q14" value="C" /> C) Jazz<br />
+        <input type="radio" name="q14" value="D" /> D) Reggae
+      </div>
+
+      <div class="slide">
+        <p>15. The Grammy Awards recognize achievements in which field?</p>
+        <input type="radio" name="q15" value="A" /> A) Film<br />
+        <input type="radio" name="q15" value="B" /> B) Literature<br />
+        <input type="radio" name="q15" value="C" /> C) Music<br />
+        <input type="radio" name="q15" value="D" /> D) Theater
+      </div>
+
+      <div class="slide">
+        <p>16. Who is the lead vocalist of the band Coldplay?</p>
+        <input type="radio" name="q16" value="A" /> A) Chris Martin<br />
+        <input type="radio" name="q16" value="B" /> B) Bono<br />
+        <input type="radio" name="q16" value="C" /> C) Dave Grohl<br />
+        <input type="radio" name="q16" value="D" /> D) Billy Joe Armstrong
+      </div>
+
+      <div class="slide">
+        <p>17. The instrument with black and white keys is called?</p>
+        <input type="radio" name="q17" value="A" /> A) Piano<br />
+        <input type="radio" name="q17" value="B" /> B) Guitar<br />
+        <input type="radio" name="q17" value="C" /> C) Violin<br />
+        <input type="radio" name="q17" value="D" /> D) Drums
+      </div>
+
+      <div class="slide">
+        <p>18. Which music streaming service is owned by Apple?</p>
+        <input type="radio" name="q18" value="A" /> A) Spotify<br />
+        <input type="radio" name="q18" value="B" /> B) Apple Music<br />
+        <input type="radio" name="q18" value="C" /> C) Pandora<br />
+        <input type="radio" name="q18" value="D" /> D) Tidal
+      </div>
+
+      <div class="slide">
+        <p>19. Which genre is BTS best known for?</p>
+        <input type="radio" name="q19" value="A" /> A) K-pop<br />
+        <input type="radio" name="q19" value="B" /> B) Rock<br />
+        <input type="radio" name="q19" value="C" /> C) Jazz<br />
+        <input type="radio" name="q19" value="D" /> D) Country
+      </div>
+
+      <div class="slide">
+        <p>20. The iconic guitar riff in "Smoke on the Water" is by which band?</p>
+        <input type="radio" name="q20" value="A" /> A) Deep Purple<br />
+        <input type="radio" name="q20" value="B" /> B) Metallica<br />
+        <input type="radio" name="q20" value="C" /> C) AC/DC<br />
+        <input type="radio" name="q20" value="D" /> D) Black Sabbath
+      </div>
     </div>
     <button id="next">Next</button>
-    
     <div id="result" class="result"></div>
-</div>
-<script src="musicquiz.js"></script>
+  </div>
+
+  <script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    var nextButton = document.getElementById('next');
+    var resultDisplay = document.getElementById('result');
+    var timerDisplay = document.getElementById('timer');
+    var timerDuration = 10 * 60; // 10 minutes in seconds
+    var timerInterval;
+
+    function showSlide(n) {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === n);
+      });
+    }
+
+    function calculateScore() {
+      var score = 0;
+      var correctAnswers = {
+        q1: 'A', q2: 'B', q3: 'B', q4: 'A', q5: 'C',
+        q6: 'A', q7: 'B', q8: 'B', q9: 'A', q10: 'C',
+        q11: 'A', q12: 'A', q13: 'A', q14: 'B', q15: 'C',
+        q16: 'A', q17: 'A', q18: 'B', q19: 'A', q20: 'A'
+      };
+
+      for (var i = 1; i <= totalSlides; i++) {
+        var questionName = 'q' + i;
+        var selected = document.querySelector('input[name="' + questionName + '"]:checked');
+        if (selected && selected.value === correctAnswers[questionName]) {
+          score++;
+        }
+      }
+      return score;
+    }
+
+    function endQuiz() {
+      var score = calculateScore();
+      resultDisplay.innerText = 'Time is up! You scored ' + score + ' out of ' + totalSlides;
+      nextButton.style.display = 'none';
+      clearInterval(timerInterval);
+      slides.forEach(s => s.classList.remove('active'));
+    }
+
+    function startTimer() {
+      var timeLeft = timerDuration;
+      updateTimerDisplay(timeLeft);
+
+      timerInterval = setInterval(function () {
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          endQuiz();
+        } else {
+          updateTimerDisplay(timeLeft);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      timerDisplay.textContent = 'Time left: ' + min.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+    }
+
+    nextButton.onclick = function () {
+      if (currentSlide < totalSlides - 1) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide++;
+        slides[currentSlide].classList.add('active');
+      } else {
+        var score = calculateScore();
+        resultDisplay.innerText = 'You scored ' + score + ' out of ' + totalSlides;
+        nextButton.style.display = 'none';
+        clearInterval(timerInterval);
+      }
+    };
+
+    showSlide(currentSlide);
+    startTimer();
+  </script>
 </body>
 </html>
