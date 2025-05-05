@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bollywood Movies Quiz - Play</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #8ea48e, #28722c);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #d9534f;
+    }
+
+    .slides {
+      margin-bottom: 20px;
+    }
+
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    label,
+    input[type=radio] {
+      cursor: pointer;
+    }
+
+    input[type=radio] {
+      margin-right: 8px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bollywood Movies Quiz</h1>
+    <div id="timer">Time left: 10:00</div>
+    <div class="slides">
+      <div class="slide active">
+        <p>1. Who directed the blockbuster movie "3 Idiots"?</p>
+        <input type="radio" name="q1" value="A" /> A) Rajkumar Hirani<br />
+        <input type="radio" name="q1" value="B" /> B) Karan Johar<br />
+        <input type="radio" name="q1" value="C" /> C) Sanjay Leela Bhansali<br />
+        <input type="radio" name="q1" value="D" /> D) Raju Hirani
+      </div>
+      <div class="slide">
+        <p>2. Which Bollywood actor is known as the "King of Bollywood"?</p>
+        <input type="radio" name="q2" value="A" /> A) Shah Rukh Khan<br />
+        <input type="radio" name="q2" value="B" /> B) Salman Khan<br />
+        <input type="radio" name="q2" value="C" /> C) Aamir Khan<br />
+        <input type="radio" name="q2" value="D" /> D) Hrithik Roshan
+      </div>
+      <div class="slide">
+        <p>3. In which year was "Lagaan" released?</p>
+        <input type="radio" name="q3" value="A" /> A) 2002<br />
+        <input type="radio" name="q3" value="B" /> B) 2001<br />
+        <input type="radio" name="q3" value="C" /> C) 2004<br />
+        <input type="radio" name="q3" value="D" /> D) 2003
+      </div>
+      <div class="slide">
+        <p>4. Which movie features the song "Chaiyya Chaiyya"?</p>
+        <input type="radio" name="q4" value="A" /> A) Dil Se<br />
+        <input type="radio" name="q4" value="B" /> B) Dhoom 2<br />
+        <input type="radio" name="q4" value="C" /> C) Om Shanti Om<br />
+        <input type="radio" name="q4" value="D" /> D) Rockstar
+      </div>
+      <div class="slide">
+        <p>5. Who played the lead role in "Bajrangi Bhaijaan"?</p>
+        <input type="radio" name="q5" value="A" /> A) Salman Khan<br />
+        <input type="radio" name="q5" value="B" /> B) Shah Rukh Khan<br />
+        <input type="radio" name="q5" value="C" /> C) Aamir Khan<br />
+        <input type="radio" name="q5" value="D" /> D) Akshay Kumar
+      </div>
+      <div class="slide">
+        <p>6. Which actress starred in "Queen" (2013)?</p>
+        <input type="radio" name="q6" value="A" /> A) Deepika Padukone<br />
+        <input type="radio" name="q6" value="B" /> B) Kangana Ranaut<br />
+        <input type="radio" name="q6" value="C" /> C) Alia Bhatt<br />
+        <input type="radio" name="q6" value="D" /> D) Priyanka Chopra
+      </div>
+      <div class="slide">
+        <p>7. Which movie is directed by Sanjay Leela Bhansali?</p>
+        <input type="radio" name="q7" value="A" /> A) Padmaavat<br />
+        <input type="radio" name="q7" value="B" /> B) Munna Bhai MBBS<br />
+        <input type="radio" name="q7" value="C" /> C) Rockstar<br />
+        <input type="radio" name="q7" value="D" /> D) Bajrangi Bhaijaan
+      </div>
+      <div class="slide">
+        <p>8. Which actor played "Dangal" wrestler Mahavir Singh Phogat?</p>
+        <input type="radio" name="q8" value="A" /> A) Salman Khan<br />
+        <input type="radio" name="q8" value="B" /> B) Aamir Khan<br />
+        <input type="radio" name="q8" value="C" /> C) Hrithik Roshan<br />
+        <input type="radio" name="q8" value="D" /> D) Ranbir Kapoor
+      </div>
+      <div class="slide">
+        <p>9. Which Bollywood movie is known for the dialogue "Mogambo khush hua"?</p>
+        <input type="radio" name="q9" value="A" /> A) Mr. India<br />
+        <input type="radio" name="q9" value="B" /> B) Sholay<br />
+        <input type="radio" name="q9" value="C" /> C) Don<br />
+        <input type="radio" name="q9" value="D" /> D) Ghayal
+      </div>
+      <div class="slide">
+        <p>10. Who composed music for "Dilwale Dulhania Le Jayenge"?</p>
+        <input type="radio" name="q10" value="A" /> A) A. R. Rahman<br />
+        <input type="radio" name="q10" value="B" /> B) Jatin-Lalit<br />
+        <input type="radio" name="q10" value="C" /> C) Anu Malik<br />
+        <input type="radio" name="q10" value="D" /> D) Shankar-Ehsaan-Loy
+      </div>
+      <!-- 10 more questions -->
+      <div class="slide">
+        <p>11. What was the first Hindi film to be nominated for an Oscar?</p>
+        <input type="radio" name="q11" value="A" /> A) Mother India<br />
+        <input type="radio" name="q11" value="B" /> B) Lagaan<br />
+        <input type="radio" name="q11" value="C" /> C) Salaam Bombay<br />
+        <input type="radio" name="q11" value="D" /> D) Pather Panchali
+      </div>
+      <div class="slide">
+        <p>12. Who sang the famous song "Tujh Mein Rab Dikhta Hai"?</p>
+        <input type="radio" name="q12" value="A" /> A) Sonu Nigam<br />
+        <input type="radio" name="q12" value="B" /> B) Arijit Singh<br />
+        <input type="radio" name="q12" value="C" /> C) Kumar Sanu<br />
+        <input type="radio" name="q12" value="D" /> D) Udit Narayan
+      </div>
+      <div class="slide">
+        <p>13. Which film launched Alia Bhatt's career?</p>
+        <input type="radio" name="q13" value="A" /> A) Student of the Year<br />
+        <input type="radio" name="q13" value="B" /> B) Highway<br />
+        <input type="radio" name="q13" value="C" /> C) 2 States<br />
+        <input type="radio" name="q13" value="D" /> D) Udta Punjab
+      </div>
+      <div class="slide">
+        <p>14. Which Bollywood actor has the nickname "Mr. Perfectionist"?</p>
+        <input type="radio" name="q14" value="A" /> A) Shahid Kapoor<br />
+        <input type="radio" name="q14" value="B" /> B) Hrithik Roshan<br />
+        <input type="radio" name="q14" value="C" /> C) Aamir Khan<br />
+        <input type="radio" name="q14" value="D" /> D) Ranveer Singh
+      </div>
+      <div class="slide">
+        <p>15. In "Kabhi Khushi Kabhie Gham", who played the role of Rahul?</p>
+        <input type="radio" name="q15" value="A" /> A) Shah Rukh Khan<br />
+        <input type="radio" name="q15" value="B" /> B) Hrithik Roshan<br />
+        <input type="radio" name="q15" value="C" /> C) Amitabh Bachchan<br />
+        <input type="radio" name="q15" value="D" /> D) Salman Khan
+      </div>
+      <div class="slide">
+        <p>16. Who is the music director duo Jatin-Lalit?</p>
+        <input type="radio" name="q16" value="A" /> A) Brothers<br />
+        <input type="radio" name="q16" value="B" /> B) Father and son<br />
+        <input type="radio" name="q16" value="C" /> C) Friends<br />
+        <input type="radio" name="q16" value="D" /> D) Cousins
+      </div>
+      <div class="slide">
+        <p>17. Which movie starred Salman Khan as a gangster named Chulbul Pandey?</p>
+        <input type="radio" name="q17" value="A" /> A) Wanted<br />
+        <input type="radio" name="q17" value="B" /> B) Dabangg<br />
+        <input type="radio" name="q17" value="C" /> C) Kick<br />
+        <input type="radio" name="q17" value="D" /> D) Bajrangi Bhaijaan
+      </div>
+      <div class="slide">
+        <p>18. Which Bollywood movie is known for the iconic song "Kajra Re"?</p>
+        <input type="radio" name="q18" value="A" /> A) Bunty Aur Babli<br />
+        <input type="radio" name="q18" value="B" /> B) Om Shanti Om<br />
+        <input type="radio" name="q18" value="C" /> C) Dilwale Dulhania Le Jayenge<br />
+        <input type="radio" name="q18" value="D" /> D) Dhoom 2
+      </div>
+      <div class="slide">
+        <p>19. Which actor is famous for the role “Circuit” in "Munna Bhai MBBS"?</p>
+        <input type="radio" name="q19" value="A" /> A) Sanjay Dutt<br />
+        <input type="radio" name="q19" value="B" /> B) Arshad Warsi<br />
+        <input type="radio" name="q19" value="C" /> C) Boman Irani<br />
+        <input type="radio" name="q19" value="D" /> D) Rajpal Yadav
+      </div>
+      <div class="slide">
+        <p>20. Which actress played the role of “Maya” in the movie “Raazi”?</p>
+        <input type="radio" name="q20" value="A" /> A) Alia Bhatt<br />
+        <input type="radio" name="q20" value="B" /> B) Vidya Balan<br />
+        <input type="radio" name="q20" value="C" /> C) Taapsee Pannu<br />
+        <input type="radio" name="q20" value="D" /> D) Anushka Sharma
+      </div>
+    </div>
+    <button id="next">Next</button>
+    <div id="result" class="result"></div>
+  </div>
+  <script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    var nextButton = document.getElementById('next');
+    var resultDisplay = document.getElementById('result');
+    var timerDisplay = document.getElementById('timer');
+    var timerDuration = 10 * 60;
+    var timerInterval;
+
+    function showSlide(n) {
+      slides.forEach(function(slide, index) {
+        slide.classList.toggle('active', index === n);
+      });
+    }
+
+    function calculateScore() {
+      var score = 0;
+      var correctAnswers = {
+        q1: 'A', q2: 'A', q3: 'B', q4: 'A', q5: 'A',
+        q6: 'B', q7: 'A', q8: 'B', q9: 'A', q10: 'B',
+        q11: 'A', q12: 'A', q13: 'A', q14: 'C', q15: 'A',
+        q16: 'A', q17: 'B', q18: 'A', q19: 'B', q20: 'A'
+      };
+
+      for (var i = 1; i <= totalSlides; i++) {
+        var questionName = 'q' + i;
+        var selected = document.querySelector('input[name="' + questionName + '"]:checked');
+        if (selected && selected.value === correctAnswers[questionName]) {
+          score++;
+        }
+      }
+      return score;
+    }
+
+    function endQuiz() {
+      var score = calculateScore();
+      resultDisplay.innerText = 'Time is up! You scored ' + score + ' out of ' + totalSlides;
+      nextButton.style.display = 'none';
+      clearInterval(timerInterval);
+      slides.forEach(function(s) { s.classList.remove('active'); });
+    }
+
+    function startTimer() {
+      var timeLeft = timerDuration;
+      updateTimerDisplay(timeLeft);
+
+      timerInterval = setInterval(function() {
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          endQuiz();
+        } else {
+          updateTimerDisplay(timeLeft);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      timerDisplay.textContent = 'Time left: ' + min.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+    }
+
+    nextButton.onclick = function() {
+      if (currentSlide < totalSlides -1) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide++;
+        slides[currentSlide].classList.add('active');
+      } else {
+        var score = calculateScore();
+        resultDisplay.innerText = 'You scored ' + score + ' out of ' + totalSlides;
+        nextButton.style.display = 'none';
+        clearInterval(timerInterval);
+      }
+    };
+
+    showSlide(currentSlide);
+    startTimer();
+  </script>
+</body>
+</html>

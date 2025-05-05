@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sports Quiz - Play</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #8ea48e, #28722c);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #d9534f;
+    }
+
+    .slides {
+      margin-bottom: 20px;
+    }
+
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    label,
+    input[type=radio] {
+      cursor: pointer;
+    }
+
+    input[type=radio] {
+      margin-right: 8px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sports Quiz</h1>
+    <div id="timer">Time left: 10:00</div>
+    <div class="slides">
+      <div class="slide active">
+        <p>1. What sport is known as “the king of sports”?</p>
+        <input type="radio" name="q1" value="A" /> A) Soccer<br />
+        <input type="radio" name="q1" value="B" /> B) Basketball<br />
+        <input type="radio" name="q1" value="C" /> C) Baseball<br />
+        <input type="radio" name="q1" value="D" /> D) Tennis
+      </div>
+
+      <div class="slide">
+        <p>2. In which sport would you perform a slam dunk?</p>
+        <input type="radio" name="q2" value="A" /> A) Basketball<br />
+        <input type="radio" name="q2" value="B" /> B) Volleyball<br />
+        <input type="radio" name="q2" value="C" /> C) Football<br />
+        <input type="radio" name="q2" value="D" /> D) Tennis
+      </div>
+
+      <div class="slide">
+        <p>3. Who has won the most Olympic gold medals?</p>
+        <input type="radio" name="q3" value="A" /> A) Usain Bolt<br />
+        <input type="radio" name="q3" value="B" /> B) Michael Phelps<br />
+        <input type="radio" name="q3" value="C" /> C) Carl Lewis<br />
+        <input type="radio" name="q3" value="D" /> D) Mark Spitz
+      </div>
+
+      <div class="slide">
+        <p>4. Which country hosted the 2016 Summer Olympics?</p>
+        <input type="radio" name="q4" value="A" /> A) China<br />
+        <input type="radio" name="q4" value="B" /> B) Brazil<br />
+        <input type="radio" name="q4" value="C" /> C) United Kingdom<br />
+        <input type="radio" name="q4" value="D" /> D) Russia
+      </div>
+
+      <div class="slide">
+        <p>5. In soccer, what is a “hat-trick”?</p>
+        <input type="radio" name="q5" value="A" /> A) Three assists in a game<br />
+        <input type="radio" name="q5" value="B" /> B) Three goals in one game<br />
+        <input type="radio" name="q5" value="C" /> C) Three fouls<br />
+        <input type="radio" name="q5" value="D" /> D) Three penalties
+      </div>
+
+      <div class="slide">
+        <p>6. How long is an Olympic swimming pool?</p>
+        <input type="radio" name="q6" value="A" /> A) 50 meters<br />
+        <input type="radio" name="q6" value="B" /> B) 25 meters<br />
+        <input type="radio" name="q6" value="C" /> C) 100 meters<br />
+        <input type="radio" name="q6" value="D" /> D) 75 meters
+      </div>
+
+      <div class="slide">
+        <p>7. Which sport uses the terms “birdie” and “eagle”?</p>
+        <input type="radio" name="q7" value="A" /> A) Tennis<br />
+        <input type="radio" name="q7" value="B" /> B) Golf<br />
+        <input type="radio" name="q7" value="C" /> C) Badminton<br />
+        <input type="radio" name="q7" value="D" /> D) Baseball
+      </div>
+
+      <div class="slide">
+        <p>8. Who is known as “The Greatest” boxer of all time?</p>
+        <input type="radio" name="q8" value="A" /> A) Mike Tyson<br />
+        <input type="radio" name="q8" value="B" /> B) Floyd Mayweather<br />
+        <input type="radio" name="q8" value="C" /> C) Muhammad Ali<br />
+        <input type="radio" name="q8" value="D" /> D) Manny Pacquiao
+      </div>
+
+      <div class="slide">
+        <p>9. Which country won the first FIFA World Cup in 1930?</p>
+        <input type="radio" name="q9" value="A" /> A) Brazil<br />
+        <input type="radio" name="q9" value="B" /> B) Uruguay<br />
+        <input type="radio" name="q9" value="C" /> C) Argentina<br />
+        <input type="radio" name="q9" value="D" /> D) Italy
+      </div>
+
+      <div class="slide">
+        <p>10. In which sport do teams compete for the Stanley Cup?</p>
+        <input type="radio" name="q10" value="A" /> A) Ice Hockey<br />
+        <input type="radio" name="q10" value="B" /> B) Basketball<br />
+        <input type="radio" name="q10" value="C" /> C) Baseball<br />
+        <input type="radio" name="q10" value="D" /> D) Football
+      </div>
+
+      <div class="slide">
+        <p>11. How many players are on a basketball court for one team?</p>
+        <input type="radio" name="q11" value="A" /> A) Five<br />
+        <input type="radio" name="q11" value="B" /> B) Six<br />
+        <input type="radio" name="q11" value="C" /> C) Seven<br />
+        <input type="radio" name="q11" value="D" /> D) Four
+      </div>
+
+      <div class="slide">
+        <p>12. Which athlete is famous for breaking the four-minute mile?</p>
+        <input type="radio" name="q12" value="A" /> A) Roger Bannister<br />
+        <input type="radio" name="q12" value="B" /> B) Carl Lewis<br />
+        <input type="radio" name="q12" value="C" /> C) Usain Bolt<br />
+        <input type="radio" name="q12" value="D" /> D) Mo Farah
+      </div>
+
+      <div class="slide">
+        <p>13. What sport is Serena Williams famous for?</p>
+        <input type="radio" name="q13" value="A" /> A) Golf<br />
+        <input type="radio" name="q13" value="B" /> B) Tennis<br />
+        <input type="radio" name="q13" value="C" /> C) Swimming<br />
+        <input type="radio" name="q13" value="D" /> D) Basketball
+      </div>
+
+      <div class="slide">
+        <p>14. What is the maximum score possible in a single frame of bowling?</p>
+        <input type="radio" name="q14" value="A" /> A) 10<br />
+        <input type="radio" name="q14" value="B" /> B) 30<br />
+        <input type="radio" name="q14" value="C" /> C) 20<br />
+        <input type="radio" name="q14" value="D" /> D) 50
+      </div>
+
+      <div class="slide">
+        <p>15. What is the official length of a marathon?</p>
+        <input type="radio" name="q15" value="A" /> A) 26.2 miles<br />
+        <input type="radio" name="q15" value="B" /> B) 25 miles<br />
+        <input type="radio" name="q15" value="C" /> C) 30 miles<br />
+        <input type="radio" name="q15" value="D" /> D) 20 miles
+      </div>
+
+      <div class="slide">
+        <p>16. Which sport is played at Wimbledon?</p>
+        <input type="radio" name="q16" value="A" /> A) Badminton<br />
+        <input type="radio" name="q16" value="B" /> B) Tennis<br />
+        <input type="radio" name="q16" value="C" /> C) Squash<br />
+        <input type="radio" name="q16" value="D" /> D) Table tennis
+      </div>
+
+      <div class="slide">
+        <p>17. Where were the 2000 Summer Olympics held?</p>
+        <input type="radio" name="q17" value="A" /> A) Athens<br />
+        <input type="radio" name="q17" value="B" /> B) Sydney<br />
+        <input type="radio" name="q17" value="C" /> C) Beijing<br />
+        <input type="radio" name="q17" value="D" /> D) Atlanta
+      </div>
+
+      <div class="slide">
+        <p>18. How many holes are there in a standard round of golf?</p>
+        <input type="radio" name="q18" value="A" /> A) 18<br />
+        <input type="radio" name="q18" value="B" /> B) 9<br />
+        <input type="radio" name="q18" value="C" /> C) 27<br />
+        <input type="radio" name="q18" value="D" /> D) 36
+      </div>
+
+      <div class="slide">
+        <p>19. What city is home to the famous football club FC Barcelona?</p>
+        <input type="radio" name="q19" value="A" /> A) Madrid<br />
+        <input type="radio" name="q19" value="B" /> B) Barcelona<br />
+        <input type="radio" name="q19" value="C" /> C) Valencia<br />
+        <input type="radio" name="q19" value="D" /> D) Seville
+      </div>
+
+      <div class="slide">
+        <p>20. How long is an NBA basketball court?</p>
+        <input type="radio" name="q20" value="A" /> A) 94 feet<br />
+        <input type="radio" name="q20" value="B" /> B) 100 feet<br />
+        <input type="radio" name="q20" value="C" /> C) 90 feet<br />
+        <input type="radio" name="q20" value="D" /> D) 85 feet
+      </div>
+    </div>
+    <button id="next">Next</button>
+    <div id="result" class="result"></div>
+  </div>
+  <script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    var nextButton = document.getElementById('next');
+    var resultDisplay = document.getElementById('result');
+    var timerDisplay = document.getElementById('timer');
+    var timerDuration = 10 * 60;
+    var timerInterval;
+
+    function showSlide(n) {
+      slides.forEach(function(slide, index) {
+        slide.classList.toggle('active', index === n);
+      });
+    }
+
+    function calculateScore() {
+      var score = 0;
+      var correctAnswers = {
+        q1: 'A', q2: 'A', q3: 'B', q4: 'B', q5: 'B',
+        q6: 'C', q7: 'B', q8: 'B', q9: 'B', q10: 'A',
+        q11: 'C', q12: 'B', q13: 'B', q14: 'B', q15: 'A',
+        q16: 'B', q17: 'B', q18: 'A', q19: 'B', q20: 'A'
+      };
+
+      for (var i = 1; i <= totalSlides; i++) {
+        var questionName = 'q' + i;
+        var selected = document.querySelector('input[name="' + questionName + '"]:checked');
+        if (selected && selected.value === correctAnswers[questionName]) {
+          score++;
+        }
+      }
+      return score;
+    }
+
+    function endQuiz() {
+      var score = calculateScore();
+      resultDisplay.innerText = 'Time is up! You scored ' + score + ' out of ' + totalSlides;
+      nextButton.style.display = 'none';
+      clearInterval(timerInterval);
+      slides.forEach(function(s) { s.classList.remove('active'); });
+    }
+
+    function startTimer() {
+      var timeLeft = timerDuration;
+      updateTimerDisplay(timeLeft);
+
+      timerInterval = setInterval(function() {
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          endQuiz();
+        } else {
+          updateTimerDisplay(timeLeft);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      timerDisplay.textContent = 'Time left: ' + min.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+    }
+
+    nextButton.onclick = function() {
+      if (currentSlide < totalSlides -1) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide++;
+        slides[currentSlide].classList.add('active');
+      } else {
+        var score = calculateScore();
+        resultDisplay.innerText = 'You scored ' + score + ' out of ' + totalSlides;
+        nextButton.style.display = 'none';
+        clearInterval(timerInterval);
+      }
+    };
+
+    showSlide(currentSlide);
+    startTimer();
+  </script>
+</body>
+</html>

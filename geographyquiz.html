@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geography Quiz - Play</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #8ea48e, #28722c);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #d9534f;
+    }
+
+    .slides {
+      margin-bottom: 20px;
+    }
+
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    label,
+    input[type=radio] {
+      cursor: pointer;
+    }
+
+    input[type=radio] {
+      margin-right: 8px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Geography Quiz</h1>
+    <div id="timer">Time left: 10:00</div>
+    <div class="slides">
+      <div class="slide active">
+        <p>1. What is the capital of France?</p>
+        <input type="radio" name="q1" value="A" /> A) Paris<br />
+        <input type="radio" name="q1" value="B" /> B) Lyon<br />
+        <input type="radio" name="q1" value="C" /> C) Marseille<br />
+        <input type="radio" name="q1" value="D" /> D) Toulouse
+      </div>
+
+      <div class="slide">
+        <p>2. Which continent is Australia part of?</p>
+        <input type="radio" name="q2" value="A" /> A) Asia<br />
+        <input type="radio" name="q2" value="B" /> B) Oceania<br />
+        <input type="radio" name="q2" value="C" /> C) Europe<br />
+        <input type="radio" name="q2" value="D" /> D) Africa
+      </div>
+
+      <div class="slide">
+        <p>3. What river runs through Egypt?</p>
+        <input type="radio" name="q3" value="A" /> A) Amazon<br />
+        <input type="radio" name="q3" value="B" /> B) Yangtze<br />
+        <input type="radio" name="q3" value="C" /> C) Nile<br />
+        <input type="radio" name="q3" value="D" /> D) Mississippi
+      </div>
+
+      <div class="slide">
+        <p>4. Which country has the largest population?</p>
+        <input type="radio" name="q4" value="A" /> A) India<br />
+        <input type="radio" name="q4" value="B" /> B) United States<br />
+        <input type="radio" name="q4" value="C" /> C) China<br />
+        <input type="radio" name="q4" value="D" /> D) Russia
+      </div>
+
+      <div class="slide">
+        <p>5. What is the tallest mountain in the world?</p>
+        <input type="radio" name="q5" value="A" /> A) K2<br />
+        <input type="radio" name="q5" value="B" /> B) Kangchenjunga<br />
+        <input type="radio" name="q5" value="C" /> C) Everest<br />
+        <input type="radio" name="q5" value="D" /> D) Lhotse
+      </div>
+
+      <div class="slide">
+        <p>6. Which ocean is the largest?</p>
+        <input type="radio" name="q6" value="A" /> A) Atlantic<br />
+        <input type="radio" name="q6" value="B" /> B) Indian<br />
+        <input type="radio" name="q6" value="C" /> C) Pacific<br />
+        <input type="radio" name="q6" value="D" /> D) Arctic
+      </div>
+
+      <div class="slide">
+        <p>7. Which U.S. state is known as the "Sunshine State"?</p>
+        <input type="radio" name="q7" value="A" /> A) California<br />
+        <input type="radio" name="q7" value="B" /> B) Florida<br />
+        <input type="radio" name="q7" value="C" /> C) Texas<br />
+        <input type="radio" name="q7" value="D" /> D) Arizona
+      </div>
+
+      <div class="slide">
+        <p>8. What country is the city of Vienna in?</p>
+        <input type="radio" name="q8" value="A" /> A) Germany<br />
+        <input type="radio" name="q8" value="B" /> B) Austria<br />
+        <input type="radio" name="q8" value="C" /> C) Switzerland<br />
+        <input type="radio" name="q8" value="D" /> D) Hungary
+      </div>
+
+      <div class="slide">
+        <p>9. Which country has the most natural lakes?</p>
+        <input type="radio" name="q9" value="A" /> A) Canada<br />
+        <input type="radio" name="q9" value="B" /> B) Russia<br />
+        <input type="radio" name="q9" value="C" /> C) United States<br />
+        <input type="radio" name="q9" value="D" /> D) Finland
+      </div>
+
+      <div class="slide">
+        <p>10. What strait separates Europe and Asia?</p>
+        <input type="radio" name="q10" value="A" /> A) Strait of Gibraltar<br />
+        <input type="radio" name="q10" value="B" /> B) Bosporus Strait<br />
+        <input type="radio" name="q10" value="C" /> C) Strait of Hormuz<br />
+        <input type="radio" name="q10" value="D" /> D) Bering Strait
+      </div>
+
+      <div class="slide">
+        <p>11. What is the capital of Brazil?</p>
+        <input type="radio" name="q11" value="A" /> A) Rio de Janeiro<br />
+        <input type="radio" name="q11" value="B" /> B) São Paulo<br />
+        <input type="radio" name="q11" value="C" /> C) Brasília<br />
+        <input type="radio" name="q11" value="D" /> D) Salvador
+      </div>
+
+      <div class="slide">
+        <p>12. Which desert is the largest in the world?</p>
+        <input type="radio" name="q12" value="A" /> A) Gobi<br />
+        <input type="radio" name="q12" value="B" /> B) Sahara<br />
+        <input type="radio" name="q12" value="C" /> C) Arabian<br />
+        <input type="radio" name="q12" value="D" /> D) Kalahari
+      </div>
+
+      <div class="slide">
+        <p>13. Which ocean is Bermuda located in?</p>
+        <input type="radio" name="q13" value="A" /> A) Atlantic<br />
+        <input type="radio" name="q13" value="B" /> B) Pacific<br />
+        <input type="radio" name="q13" value="C" /> C) Indian<br />
+        <input type="radio" name="q13" value="D" /> D) Arctic
+      </div>
+
+      <div class="slide">
+        <p>14. What is the smallest country in the world?</p>
+        <input type="radio" name="q14" value="A" /> A) Monaco<br />
+        <input type="radio" name="q14" value="B" /> B) Nauru<br />
+        <input type="radio" name="q14" value="C" /> C) Vatican City<br />
+        <input type="radio" name="q14" value="D" /> D) San Marino
+      </div>
+
+      <div class="slide">
+        <p>15. Which country has the most time zones?</p>
+        <input type="radio" name="q15" value="A" /> A) Russia<br />
+        <input type="radio" name="q15" value="B" /> B) United States<br />
+        <input type="radio" name="q15" value="C" /> C) France<br />
+        <input type="radio" name="q15" value="D" /> D) China
+      </div>
+
+      <div class="slide">
+        <p>16. What is the capital city of Japan?</p>
+        <input type="radio" name="q16" value="A" /> A) Tokyo<br />
+        <input type="radio" name="q16" value="B" /> B) Kyoto<br />
+        <input type="radio" name="q16" value="C" /> C) Osaka<br />
+        <input type="radio" name="q16" value="D" /> D) Hiroshima
+      </div>
+
+      <div class="slide">
+        <p>17. Which country’s border is closest to the South Pole?</p>
+        <input type="radio" name="q17" value="A" /> A) Chile<br />
+        <input type="radio" name="q17" value="B" /> B) Argentina<br />
+        <input type="radio" name="q17" value="C" /> C) New Zealand<br />
+        <input type="radio" name="q17" value="D" /> D) Australia
+      </div>
+
+      <div class="slide">
+        <p>18. Which of these countries is landlocked?</p>
+        <input type="radio" name="q18" value="A" /> A) Bolivia<br />
+        <input type="radio" name="q18" value="B" /> B) Brazil<br />
+        <input type="radio" name="q18" value="C" /> C) Peru<br />
+        <input type="radio" name="q18" value="D" /> D) Colombia
+      </div>
+
+      <div class="slide">
+        <p>19. What U.S. state is known as the "Land of 10,000 Lakes"?</p>
+        <input type="radio" name="q19" value="A" /> A) Wisconsin<br />
+        <input type="radio" name="q19" value="B" /> B) Michigan<br />
+        <input type="radio" name="q19" value="C" /> C) Minnesota<br />
+        <input type="radio" name="q19" value="D" /> D) Alaska
+      </div>
+
+      <div class="slide">
+        <p>20. The Great Barrier Reef is located in which country?</p>
+        <input type="radio" name="q20" value="A" /> A) Australia<br />
+        <input type="radio" name="q20" value="B" /> B) South Africa<br />
+        <input type="radio" name="q20" value="C" /> C) Canada<br />
+        <input type="radio" name="q20" value="D" /> D) Indonesia
+      </div>
+    </div>
+    <button id="next">Next</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    var nextButton = document.getElementById('next');
+    var resultDisplay = document.getElementById('result');
+    var timerDisplay = document.getElementById('timer');
+    var timerDuration = 10 * 60; // 10 minutes in seconds
+    var timerInterval;
+
+    function showSlide(n) {
+      slides.forEach(function(slide, index) {
+        slide.classList.toggle('active', index === n);
+      });
+    }
+
+    function calculateScore() {
+      var score = 0;
+      var correctAnswers = {
+        q1: 'A', q2: 'B', q3: 'C', q4: 'C', q5: 'C',
+        q6: 'C', q7: 'B', q8: 'B', q9: 'A', q10: 'B',
+        q11: 'C', q12: 'B', q13: 'A', q14: 'C', q15: 'A',
+        q16: 'A', q17: 'B', q18: 'A', q19: 'C', q20: 'A'
+      };
+
+      for (var i = 1; i <= totalSlides; i++) {
+        var questionName = 'q' + i;
+        var selected = document.querySelector('input[name="' + questionName + '"]:checked');
+        if (selected && selected.value === correctAnswers[questionName]) {
+          score++;
+        }
+      }
+      return score;
+    }
+
+    function endQuiz() {
+      var score = calculateScore();
+      resultDisplay.innerText = 'Time is up! You scored ' + score + ' out of ' + totalSlides;
+      nextButton.style.display = 'none';
+      clearInterval(timerInterval);
+      slides.forEach(function(s) { s.classList.remove('active'); });
+    }
+
+    function startTimer() {
+      var timeLeft = timerDuration;
+      updateTimerDisplay(timeLeft);
+
+      timerInterval = setInterval(function() {
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          endQuiz();
+        } else {
+          updateTimerDisplay(timeLeft);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      timerDisplay.textContent = 'Time left: ' + min.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+    }
+
+    nextButton.onclick = function() {
+      if (currentSlide < totalSlides - 1) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide++;
+        slides[currentSlide].classList.add('active');
+      } else {
+        var score = calculateScore();
+        resultDisplay.innerText = 'You scored ' + score + ' out of ' + totalSlides;
+        nextButton.style.display = 'none';
+        clearInterval(timerInterval);
+      }
+    };
+
+    showSlide(currentSlide);
+    startTimer();
+  </script>
+</body>
+</html>
