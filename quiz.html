@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Quiz Application - Topics</title>
     <style>
         body {
@@ -37,19 +37,22 @@
             background-position: center; /* Center the background image */
             background-repeat: no-repeat; /* Prevent background from repeating */
             width: 80%;
-            max-width: 800px; /* Increased width for side-by-side layout */
+            max-width: 900px; /* Increased width for more cards */
             margin-top: 20px;
             text-align: center;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); /* Glowing blue shadow */
             padding: 20px;
             position: relative; /* Position relative for absolute children */
+            box-sizing: border-box;
         }
 
         .card-container {
-            display: flex; /* Use flexbox to arrange cards side by side */
+            display: flex; /* Use flexbox to arrange cards */
+            flex-wrap: wrap; /* Allow wrapping to new lines */
             justify-content: space-around; /* Space between cards */
             margin-top: 20px;
+            gap: 20px; /* Space between cards for wrapping */
         }
 
         .card {
@@ -57,7 +60,7 @@
             color: white;
             border-radius: 10px;
             padding: 20px;
-            width: 200px; /* Fixed width for card */
+            width: 260px; /* Fixed width for card */
             height: 250px; /* Fixed height for card */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for card */
             transition: transform 0.3s; /* Animation for hover effect */
@@ -65,6 +68,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between; /* Space between title and description */
+            box-sizing: border-box;
         }
 
         .card:hover {
@@ -76,6 +80,7 @@
             color: #f0f0f0; /* Light color for description text */
             font-size: 18px;
             text-align: center; /* Center align the text */
+            flex-grow: 1;
         }
 
         .return-home {
@@ -99,11 +104,22 @@
             background-color: #007BFF; /* Background color on hover */
             color: white; /* Text color on hover */
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 720px) {
+            .card-container {
+                justify-content: center;
+            }
+            .card {
+                width: 90vw;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h2>Quiz Topics</h2> <!-- Header title -->
+        <h2>Quiz Topics</h2>
     </header>
 
     <div class="container">
@@ -113,7 +129,7 @@
             <div class="card" onclick="startQuiz('music')">
                 <strong>Music</strong>
                 <div class="description">
-                    This quiz tests your knowledge of                current mainstream artists. Answer questions about their hit songs, albums, and collaborations to showcase your familiarity with today’s music landscape!
+                    This quiz tests your knowledge of current mainstream artists. Answer questions about their hit songs, albums, and collaborations to showcase your familiarity with today’s music landscape!
                 </div>
             </div>
             <div class="card" onclick="startQuiz('history')">
@@ -122,24 +138,57 @@
                     This quiz challenges your understanding of significant historical events, figures, and timelines. Test your knowledge of world history and see how well you know the past!
                 </div>
             </div>
+            <div class="card" onclick="startQuiz('science')">
+                <strong>Science</strong>
+                <div class="description">
+                    Explore the wonders of science from physics to biology. This quiz will test your knowledge of fundamental concepts, discoveries, and famous scientists.
+                </div>
+            </div>
+            <div class="card" onclick="startQuiz('geography')">
+                <strong>Geography</strong>
+                <div class="description">
+                    How well do you know the world? Test your skills on countries, capitals, landmarks, and geographical features across the globe.
+                </div>
+            </div>
+            <div class="card" onclick="startQuiz('sports')">
+                <strong>Sports</strong>
+                <div class="description">
+                    A quiz for sports enthusiasts! Test your knowledge of popular sports, athletes, records, and historic matches.
+                </div>
+            </div>
+            <div class="card" onclick="startQuiz('movies')">
+                <strong>Movies</strong>
+                <div class="description">
+                    Dive into the world of cinema. Answer questions about blockbuster hits, actors, directors, and famous quotes.
+                </div>
+            </div>
         </div>
 
         <div class="return-home">
-            <a href="homepage.html">Return to Home</a> <!-- Return Home Link -->
+            <a href="homepage.html">Return to Home</a>
         </div>
         <div class="return-home">
-            <a href="index.html">Logout</a> <!-- Logout Link -->
+            <a href="index.html">Logout</a>
         </div>
     </div>
 
     <script>
         function startQuiz(topic) {
             if (topic === 'music') {
-                window.location.href = 'musicquiz.html'; // Redirect to music quiz
+                window.location.href = 'musicquiz.html';
             } else if (topic === 'history') {
-                window.location.href = 'historyquiz.html'; // Redirect to history quiz
+                window.location.href = 'historyquiz.html';
+            } else if (topic === 'science') {
+                window.location.href = 'sciencequiz.html';
+            } else if (topic === 'geography') {
+                window.location.href = 'geographyquiz.html';
+            } else if (topic === 'sports') {
+                window.location.href = 'sportsquiz.html';
+            } else if (topic === 'movies') {
+                window.location.href = 'moviesquiz.html';
             }
         }
     </script>
 </body>
 </html>
+
