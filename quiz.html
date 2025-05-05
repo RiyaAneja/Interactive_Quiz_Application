@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application - Topics</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('bg-topic.jpg'); /* Background image for the outer container */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: center; /* Center the heading */
+            width: 100%;
+            background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
+            padding: 15px 0;
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); /* Glowing blue shadow */
+        }
+
+        h2 {
+            margin: 0; /* Remove default margin */
+        }
+
+        .container {
+            background-image: url('bg4.jpg'); /* Background image for the container */
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background from repeating */
+            width: 80%;
+            max-width: 800px; /* Increased width for side-by-side layout */
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); /* Glowing blue shadow */
+            padding: 20px;
+            position: relative; /* Position relative for absolute children */
+        }
+
+        .card-container {
+            display: flex; /* Use flexbox to arrange cards side by side */
+            justify-content: space-around; /* Space between cards */
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: rgba(0, 123, 255, 0.8); /* Color same as header */
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px; /* Fixed width for card */
+            height: 250px; /* Fixed height for card */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for card */
+            transition: transform 0.3s; /* Animation for hover effect */
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between title and description */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .description {
+            margin-top: 14px;
+            color: #f0f0f0; /* Light color for description text */
+            font-size: 18px;
+            text-align: center; /* Center align the text */
+        }
+
+        .return-home {
+            margin-top: 30px; /* Increased margin for spacing between buttons */
+            text-align: center;
+        }
+
+        .return-home a {
+            text-decoration: none;
+            background-color:#f0f0f0;
+            color: #007BFF; /* Blue color for link */
+            font-weight: bold;
+            margin: 0 10px; /* Space between links */
+            padding: 10px 15px; /* Padding for buttons */
+            border: 2px solid #007BFF; /* Border for buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+        }
+
+        .return-home a:hover {
+            background-color: #007BFF; /* Background color on hover */
+            color: white; /* Text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Quiz Topics</h2> <!-- Header title -->
+    </header>
+
+    <div class="container">
+        <h1>Select a Quiz Topic</h1>
+
+        <div class="card-container">
+            <div class="card" onclick="startQuiz('music')">
+                <strong>Music</strong>
+                <div class="description">
+                    This quiz tests your knowledge of                current mainstream artists. Answer questions about their hit songs, albums, and collaborations to showcase your familiarity with today’s music landscape!
+                </div>
+            </div>
+            <div class="card" onclick="startQuiz('history')">
+                <strong>History</strong>
+                <div class="description">
+                    This quiz challenges your understanding of significant historical events, figures, and timelines. Test your knowledge of world history and see how well you know the past!
+                </div>
+            </div>
+        </div>
+
+        <div class="return-home">
+            <a href="homepage.html">Return to Home</a> <!-- Return Home Link -->
+        </div>
+        <div class="return-home">
+            <a href="index.html">Logout</a> <!-- Logout Link -->
+        </div>
+    </div>
+
+    <script>
+        function startQuiz(topic) {
+            if (topic === 'music') {
+                window.location.href = 'musicquiz.html'; // Redirect to music quiz
+            } else if (topic === 'history') {
+                window.location.href = 'historyquiz.html'; // Redirect to history quiz
+            }
+        }
+    </script>
+</body>
+</html>
