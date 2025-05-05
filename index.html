@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login And Signup</title>
+    <title>Login and Signup</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
     <div class="container">
-         <div id="signup-form" class="form-container">
-             <h2><i class="fas fa-user-plus"></i> Signup</h2>
-             <input type="text" id="signup-username" placeholder="Username" required>
-             <input type="password" id="signup-password" placeholder="Password" required>
-             <button onclick="signup()">Signup</button>
-             <p>Already have an account? <a href="#" onclick="toggleForms()">Login Here</a></p>
-         </div>
+        <div id="signup-form" class="form-container">
+            <h2><i class="fas fa-user-plus"></i> Signup</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signup()">Signup</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+        </div>
 
         <div id="login-form" class="form-container" style="display: none;">
             <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
             <button onclick="login()">Login</button>
-            <p>Don't have an account? <a href="#" onclick="toggleForms()">Signup Here</a></p>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Signup here</a></p>
             <div id="error-message" class="error-message" style="display: none;"></div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
