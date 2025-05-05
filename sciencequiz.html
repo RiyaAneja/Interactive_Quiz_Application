@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Science Quiz - Play</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #8ea48e, #28722c);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #d9534f;
+    }
+
+    .slides {
+      margin-bottom: 20px;
+    }
+
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    label,
+    input[type=radio] {
+      cursor: pointer;
+    }
+
+    input[type=radio] {
+      margin-right: 8px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Science Quiz</h1>
+    <div id="timer">Time left: 10:00</div>
+    <div class="slides">
+      <div class="slide active">
+        <p>1. What is the chemical symbol for water?</p>
+        <input type="radio" name="q1" value="A" /> A) H2O<br />
+        <input type="radio" name="q1" value="B" /> B) CO2<br />
+        <input type="radio" name="q1" value="C" /> C) NaCl<br />
+        <input type="radio" name="q1" value="D" /> D) O2
+      </div>
+
+      <div class="slide">
+        <p>2. What planet is known as the Red Planet?</p>
+        <input type="radio" name="q2" value="A" /> A) Mars<br />
+        <input type="radio" name="q2" value="B" /> B) Venus<br />
+        <input type="radio" name="q2" value="C" /> C) Jupiter<br />
+        <input type="radio" name="q2" value="D" /> D) Saturn
+      </div>
+
+      <div class="slide">
+        <p>3. What gas do plants absorb from the atmosphere?</p>
+        <input type="radio" name="q3" value="A" /> A) Oxygen<br />
+        <input type="radio" name="q3" value="B" /> B) Carbon dioxide<br />
+        <input type="radio" name="q3" value="C" /> C) Nitrogen<br />
+        <input type="radio" name="q3" value="D" /> D) Helium
+      </div>
+
+      <div class="slide">
+        <p>4. Who developed the theory of relativity?</p>
+        <input type="radio" name="q4" value="A" /> A) Isaac Newton<br />
+        <input type="radio" name="q4" value="B" /> B) Galileo Galilei<br />
+        <input type="radio" name="q4" value="C" /> C) Albert Einstein<br />
+        <input type="radio" name="q4" value="D" /> D) Nikola Tesla
+      </div>
+
+      <div class="slide">
+        <p>5. What is the powerhouse of the cell?</p>
+        <input type="radio" name="q5" value="A" /> A) Nucleus<br />
+        <input type="radio" name="q5" value="B" /> B) Mitochondria<br />
+        <input type="radio" name="q5" value="C" /> C) Ribosome<br />
+        <input type="radio" name="q5" value="D" /> D) Endoplasmic reticulum
+      </div>
+
+      <div class="slide">
+        <p>6. What force keeps us on the ground?</p>
+        <input type="radio" name="q6" value="A" /> A) Magnetism<br />
+        <input type="radio" name="q6" value="B" /> B) Gravity<br />
+        <input type="radio" name="q6" value="C" /> C) Friction<br />
+        <input type="radio" name="q6" value="D" /> D) Electricity
+      </div>
+
+      <div class="slide">
+        <p>7. What type of energy does a moving object have?</p>
+        <input type="radio" name="q7" value="A" /> A) Potential energy<br />
+        <input type="radio" name="q7" value="B" /> B) Kinetic energy<br />
+        <input type="radio" name="q7" value="C" /> C) Thermal energy<br />
+        <input type="radio" name="q7" value="D" /> D) Chemical energy
+      </div>
+
+      <div class="slide">
+        <p>8. What is the main gas found in the air we breathe?</p>
+        <input type="radio" name="q8" value="A" /> A) Oxygen<br />
+        <input type="radio" name="q8" value="B" /> B) Nitrogen<br />
+        <input type="radio" name="q8" value="C" /> C) Carbon dioxide<br />
+        <input type="radio" name="q8" value="D" /> D) Hydrogen
+      </div>
+
+      <div class="slide">
+        <p>9. What does DNA stand for?</p>
+        <input type="radio" name="q9" value="A" /> A) Deoxyribonucleic Acid<br />
+        <input type="radio" name="q9" value="B" /> B) Dynamic Nucleic Acid<br />
+        <input type="radio" name="q9" value="C" /> C) Deoxynitric Acid<br />
+        <input type="radio" name="q9" value="D" /> D) Dioxin Acid
+      </div>
+
+      <div class="slide">
+        <p>10. What particle has a negative charge?</p>
+        <input type="radio" name="q10" value="A" /> A) Proton<br />
+        <input type="radio" name="q10" value="B" /> B) Electron<br />
+        <input type="radio" name="q10" value="C" /> C) Neutron<br />
+        <input type="radio" name="q10" value="D" /> D) Photon
+      </div>
+
+      <div class="slide">
+        <p>11. What type of bond involves sharing electrons?</p>
+        <input type="radio" name="q11" value="A" /> A) Ionic bond<br />
+        <input type="radio" name="q11" value="B" /> B) Covalent bond<br />
+        <input type="radio" name="q11" value="C" /> C) Metallic bond<br />
+        <input type="radio" name="q11" value="D" /> D) Hydrogen bond
+      </div>
+
+      <div class="slide">
+        <p>12. What is the speed of light?</p>
+        <input type="radio" name="q12" value="A" /> A) 300,000 km/s<br />
+        <input type="radio" name="q12" value="B" /> B) 150,000 km/s<br />
+        <input type="radio" name="q12" value="C" /> C) 450,000 km/s<br />
+        <input type="radio" name="q12" value="D" /> D) 600,000 km/s
+      </div>
+
+      <div class="slide">
+        <p>13. What organ is responsible for pumping blood?</p>
+        <input type="radio" name="q13" value="A" /> A) Liver<br />
+        <input type="radio" name="q13" value="B" /> B) Brain<br />
+        <input type="radio" name="q13" value="C" /> C) Heart<br />
+        <input type="radio" name="q13" value="D" /> D) Kidney
+      </div>
+
+      <div class="slide">
+        <p>14. What is the process plants use to make food?</p>
+        <input type="radio" name="q14" value="A" /> A) Metabolism<br />
+        <input type="radio" name="q14" value="B" /> B) Photosynthesis<br />
+        <input type="radio" name="q14" value="C" /> C) Respiration<br />
+        <input type="radio" name="q14" value="D" /> D) Digestion
+      </div>
+
+      <div class="slide">
+        <p>15. What do we call animals that eat only plants?</p>
+        <input type="radio" name="q15" value="A" /> A) Carnivores<br />
+        <input type="radio" name="q15" value="B" /> B) Herbivores<br />
+        <input type="radio" name="q15" value="C" /> C) Omnivores<br />
+        <input type="radio" name="q15" value="D" /> D) Decomposers
+      </div>
+
+      <div class="slide">
+        <p>16. What element is the most abundant in the Earth's crust?</p>
+        <input type="radio" name="q16" value="A" /> A) Oxygen<br />
+        <input type="radio" name="q16" value="B" /> B) Silicon<br />
+        <input type="radio" name="q16" value="C" /> C) Aluminum<br />
+        <input type="radio" name="q16" value="D" /> D) Iron
+      </div>
+
+      <div class="slide">
+        <p>17. What type of celestial body is the Sun?</p>
+        <input type="radio" name="q17" value="A" /> A) Star<br />
+        <input type="radio" name="q17" value="B" /> B) Planet<br />
+        <input type="radio" name="q17" value="C" /> C) Asteroid<br />
+        <input type="radio" name="q17" value="D" /> D) Comet
+      </div>
+
+      <div class="slide">
+        <p>18. What is the pH of pure water?</p>
+        <input type="radio" name="q18" value="A" /> A) 7<br />
+        <input type="radio" name="q18" value="B" /> B) 0<br />
+        <input type="radio" name="q18" value="C" /> C) 14<br />
+        <input type="radio" name="q18" value="D" /> D) 1
+      </div>
+
+      <div class="slide">
+        <p>19. Which gas is produced by burning fossil fuels?</p>
+        <input type="radio" name="q19" value="A" /> A) Oxygen<br />
+        <input type="radio" name="q19" value="B" /> B) Carbon dioxide<br />
+        <input type="radio" name="q19" value="C" /> C) Nitrogen<br />
+        <input type="radio" name="q19" value="D" /> D) Helium
+      </div>
+
+      <div class="slide">
+        <p>20. What is the basic unit of life?</p>
+        <input type="radio" name="q20" value="A" /> A) Cell<br />
+        <input type="radio" name="q20" value="B" /> B) Atom<br />
+        <input type="radio" name="q20" value="C" /> C) Molecule<br />
+        <input type="radio" name="q20" value="D" /> D) Organ
+      </div>
+    </div>
+    <button id="next">Next</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    var nextButton = document.getElementById('next');
+    var resultDisplay = document.getElementById('result');
+    var timerDisplay = document.getElementById('timer');
+    var timerDuration = 10 * 60; // 10 minutes in seconds
+    var timerInterval;
+
+    function showSlide(n) {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === n);
+      });
+    }
+
+    function calculateScore() {
+      var score = 0;
+      var correctAnswers = {
+        q1: 'A', q2: 'A', q3: 'B', q4: 'C', q5: 'B',
+        q6: 'B', q7: 'B', q8: 'B', q9: 'A', q10: 'B',
+        q11: 'B', q12: 'A', q13: 'C', q14: 'B', q15: 'B',
+        q16: 'A', q17: 'A', q18: 'A', q19: 'B', q20: 'A'
+      };
+
+      for (var i = 1; i <= totalSlides; i++) {
+        var questionName = 'q' + i;
+        var selected = document.querySelector('input[name="' + questionName + '"]:checked');
+        if (selected && selected.value === correctAnswers[questionName]) {
+          score++;
+        }
+      }
+      return score;
+    }
+
+    function endQuiz() {
+      var score = calculateScore();
+      resultDisplay.innerText = 'Time is up! You scored ' + score + ' out of ' + totalSlides;
+      nextButton.style.display = 'none';
+      clearInterval(timerInterval);
+      slides.forEach(s => s.classList.remove('active'));
+    }
+
+    function startTimer() {
+      var timeLeft = timerDuration;
+      updateTimerDisplay(timeLeft);
+
+      timerInterval = setInterval(function () {
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          endQuiz();
+        } else {
+          updateTimerDisplay(timeLeft);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      timerDisplay.textContent = 'Time left: ' + min.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+    }
+
+    nextButton.onclick = function () {
+      if (currentSlide < totalSlides - 1) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide++;
+        slides[currentSlide].classList.add('active');
+      } else {
+        var score = calculateScore();
+        resultDisplay.innerText = 'You scored ' + score + ' out of ' + totalSlides;
+        nextButton.style.display = 'none';
+        clearInterval(timerInterval);
+      }
+    };
+
+    showSlide(currentSlide);
+    startTimer();
+  </script>
+</body>
+</html>
