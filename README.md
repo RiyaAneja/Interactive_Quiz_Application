@@ -32,19 +32,22 @@ Features of Interactive Learning Through Quiz Apps:
 
 Technical details
 
-HTML                                                  
+HTML 
+
 The foundation of the
 application,defining the 
 structureand content of 
 the quiz.
 
 CSS
+
 Styles the visual
 appearance of the quiz,
 includinglayout, colors,
 and fonts.
 
 JS
+
 Java Script used to make web page more dynamic and interactive.
 
 
