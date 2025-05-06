@@ -1,36 +1,24 @@
-// Function to get users from local storage or initialize an empty array
 function getUsers() {
     const users = localStorage.getItem('users');
     return users ? JSON.parse(users) : [];
 }
-
-// Function to save users to local storage
 function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users)); // Corrected variable name from 'user' to 'users'
 }
-
-// Function to toggle between signup and login forms
 function toggleForms() {
     const signupForm = document.getElementById('signup-form');
     const loginForm = document.getElementById('login-form');
     signupForm.style.display = signupForm.style.display === 'none' ? 'block' : 'none';
     loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
 }
-
-// Function to handle signup
 function signup() {
     const username = document.getElementById('signup-username').value.trim();
     const password = document.getElementById('signup-password').value;
-
-    // Validate input
     if (!username || !password) {
         alert('Please enter both username and password.');
         return;
     }
-
-    const users = getUsers();
-
-    // Check if the username already exists
+    const users = getUsers()
     if (users.find(user => user.username === username)) {
         alert('Username already exists. Please choose another one.');
         return;
