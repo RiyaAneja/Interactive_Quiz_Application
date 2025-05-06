@@ -1,12 +1,12 @@
 body {
     background: linear-gradient(to top, #8ea48e, #28722c);
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container {
@@ -14,11 +14,11 @@ body {
     border-radius: 25px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 200px;
-    max-height: 20vh;
+    width: 400px;
+    max-height: 90vh;
     overflow-y: auto;
     text-align: center;
-    animation: fadeIn 1s;
+    animation: fadeIn 1.2s;
 }
 
 h1 {
