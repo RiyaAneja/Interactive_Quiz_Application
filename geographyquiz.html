@@ -75,11 +75,11 @@
     }
 
     input[type=radio] {
-      margin-right: 8px;
+      margin-right: 5px;
     }
 
     .result {
-      margin-top: 20px;
+      margin-top: 10px;
       font-weight: bold;
       color: #000000;
     }
@@ -263,7 +263,6 @@
     <button id="next">Next</button>
     <div id="result" class="result"></div>
   </div>
-
   <script>
     var currentSlide = 0;
     var slides = document.querySelectorAll('.slide');
@@ -271,7 +270,7 @@
     var nextButton = document.getElementById('next');
     var resultDisplay = document.getElementById('result');
     var timerDisplay = document.getElementById('timer');
-    var timerDuration = 10 * 60; // 10 minutes in seconds
+    var timerDuration = 10 * 60; 
     var timerInterval;
 
     function showSlide(n) {
@@ -340,7 +339,6 @@
         clearInterval(timerInterval);
       }
     };
-
     showSlide(currentSlide);
     startTimer();
   </script>
