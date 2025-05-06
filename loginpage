@@ -3,7 +3,7 @@ function getUsers() {
     return users ? JSON.parse(users) : [];
 }
 function saveUsers(users) {
-    localStorage.setItem('users', JSON.stringify(users)); // Corrected variable name from 'user' to 'users'
+    localStorage.setItem('users', JSON.stringify(users)); 
 }
 function toggleForms() {
     const signupForm = document.getElementById('signup-form');
@@ -28,8 +28,6 @@ users.push({ username, password });
 alert('Signup successful! Redirecting to login...');
     toggleForms();
 }
-
-// Function to handle login
 function login() {
     const username = document.getElementById('login-username').value.trim();
     const password = document.getElementById('login-password').value;
@@ -38,23 +36,15 @@ function login() {
     // Clear previous error message
     errorMessage.style.display = 'none';
     errorMessage.innerText = '';
-
-    // Validate input
     if (!username || !password) {
         errorMessage.innerText = 'Please Enter Both Username and Password.';
         errorMessage.style.display = 'block';
         return;
     }
-
     const users = getUsers();
-
-    // Check if the user exists and the password is correct
-    const user = users.find(user => user.username === username && user.password === password);
-    
+    const user = users.find(user => user.username === username && user.password === password); 
     if (user) {
-        // Successful login
         alert('Login Successful! Redirecting to the Homepage...');
-        // Redirect to a new page (you can change 'homepage.html' to your desired page)
         window.location.href = 'homepage.html';
     } else {
         // Invalid credentials
