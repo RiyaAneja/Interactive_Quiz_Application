@@ -1,5 +1,7 @@
 var currentSlide = 0;
 var slides = document.querySelectorAll('.slide');
+var totalSlides = slides.length;
+var nextButton = document.getElementById('next');
 nextButton.onclick = function() {
     if (currentSlide < totalSlides - 1) {
         slides[currentSlide].classList.remove('active');
